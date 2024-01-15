@@ -4,8 +4,7 @@ const body = document.querySelector('body');
 
 myReq.onload = function() {
     const data = JSON.parse(this.responseText);
-    const name = data.name;
-    const { sprites } = data;
+    const { name, sprites } = data;
     const newName = name[0].toUpperCase();
     
 
@@ -15,6 +14,7 @@ myReq.onload = function() {
         img.src = image;
         body.append(img) 
     }
+
     createNewImage(sprites.back_default);
     createNewImage(sprites.back_shiny);
     createNewImage(sprites.front_default);
