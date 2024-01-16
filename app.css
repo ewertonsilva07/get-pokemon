@@ -1,0 +1,41 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-image: linear-gradient(-45deg, #003fb3, #00abfa 70%);
+    background-attachment: fixed;
+}
+
+#appContainer {
+    background-color: #fff;
+    min-height: 200px;
+    width: 95%;
+    margin: 30px auto 0;
+    border: 2px solid #c5c5c5;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+#searchPokemon {
+    width: 60%;
+    padding: 25px 0;
+    border: 3px solid #012ea8;
+    background-color: #0353ff;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.3rem;
+}
+
+#searchPokemon:hover {
+    cursor: pointer;
+    color: #c2c2c2;
+    background-color: #0037af;
+    border: 3px solid #001757;
+}
+
+#searchPokemon:active {
+    transform: translate(1px, -5%);
+}
