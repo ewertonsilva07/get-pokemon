@@ -1,7 +1,6 @@
 const myReq = new XMLHttpRequest();
 
 
-const body = document.querySelector('body');
 const randomizeButton = document.getElementById('searchPokemon');
 const pokemonInfo = document.getElementById('pokemonInformation');
 
@@ -10,15 +9,15 @@ const randomNumber = function () {
     return num;
 }
 
-randomizeButton.addEventListener('click', () => {
+const makeRequest = function (){
     myReq.onload = function() {
         const data = JSON.parse(this.responseText);
-        const pokemonName = document.getElementById('pokemonName');
         const { name, sprites } = data;
         const newName = name[0].toUpperCase();
-        
+        const pokemonName = document.createElement('p');
     
-        pokemonName.append(newName + name.slice(1))
+        pokemonInfo.append(pokemonName);
+        pokemonName.append(newName + name.slice(1));
         function createNewImage(image) {
             if(image !== null){
                 const img = document.createElement('img')
@@ -40,4 +39,13 @@ randomizeButton.addEventListener('click', () => {
     
     myReq.open('GET', `https://pokeapi.co/api/v2/pokemon/${randomNumber()}`);
     myReq.send();
+}
+
+randomizeButton.addEventListener('click', () => {
+    if(!pokemonInfo.innerHTML){
+        makeRequest();
+    } else{
+        pokemonInfo.innerHTML = '';
+        makeRequest();
+    }
 })
