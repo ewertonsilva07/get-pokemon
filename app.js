@@ -1,6 +1,9 @@
 const myReq = new XMLHttpRequest();
+
+
 const body = document.querySelector('body');
-const randomizeButton = document.getElementById('searchPokemon')
+const randomizeButton = document.getElementById('searchPokemon');
+const pokemonInfo = document.getElementById('pokemonInformation');
 
 const randomNumber = function () {
     const num = Math.floor(Math.random() * 1017) + 1;
@@ -10,16 +13,17 @@ const randomNumber = function () {
 randomizeButton.addEventListener('click', () => {
     myReq.onload = function() {
         const data = JSON.parse(this.responseText);
+        const pokemonName = document.getElementById('pokemonName');
         const { name, sprites } = data;
         const newName = name[0].toUpperCase();
         
     
-        body.append(newName + name.slice(1))
+        pokemonName.append(newName + name.slice(1))
         function createNewImage(image) {
             if(image !== null){
                 const img = document.createElement('img')
                 img.src = image;
-                body.append(img); 
+                pokemonInfo.append(img); 
             }
         }
 
