@@ -19,23 +19,32 @@ const makeRequest = function (){
         pokemonInfo.append(pokemonName);
         pokemonName.append(newName + name.slice(1));
 
+        const commonColor = document.createElement('div');
+        const shinyColor = document.createElement('div');
 
-        function createNewImage(image) {
+        function createNewImage(image, pokemonColor) {
             if(image !== null){
                 const container = document.createElement('div');
                 const img = document.createElement('img')
                 container.classList.add('img-container');
                 img.src = image;
-                img.classList.add('img-styles')
-                pokemonInfo.append(container);
+                img.classList.add('img-styles');
+                pokemonInfo.append(pokemonColor);
+                pokemonColor.append(container);
                 container.append(img);
             }
         }
 
-        createNewImage(sprites.back_default);
-        createNewImage(sprites.front_default);
-        createNewImage(sprites.back_shiny);
-        createNewImage(sprites.front_shiny);
+        const commonTitle = document.createElement('h2')
+        commonTitle.innerText = 'Common Color';
+        commonColor.append(commonTitle);
+        createNewImage(sprites.back_default, commonColor);
+        createNewImage(sprites.front_default, commonColor);
+        const shinyTitle = document.createElement('h2')
+        shinyTitle.innerText = 'Shiny';
+        shinyColor.append(shinyTitle);
+        createNewImage(sprites.back_shiny, shinyColor);
+        createNewImage(sprites.front_shiny, shinyColor);
     }
     
     myReq.onerror = function() {
