@@ -18,11 +18,17 @@ const makeRequest = function (){
     
         pokemonInfo.append(pokemonName);
         pokemonName.append(newName + name.slice(1));
+
+
         function createNewImage(image) {
             if(image !== null){
+                const container = document.createElement('div');
                 const img = document.createElement('img')
+                container.classList.add('img-container');
                 img.src = image;
-                pokemonInfo.append(img); 
+                img.classList.add('img-styles')
+                pokemonInfo.append(container);
+                container.append(img);
             }
         }
 
