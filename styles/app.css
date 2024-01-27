@@ -15,6 +15,7 @@ body{
     border-radius: 5px;
     display: flex;
     flex-direction: Column;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -37,6 +38,10 @@ body{
 
 #searchPokemon:active {
     transform: translate(1px, -5%);
+}
+
+.pokemon-name {
+    font-size: 3rem;
 }
 
 .img-container {

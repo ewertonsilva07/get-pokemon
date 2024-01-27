@@ -14,18 +14,19 @@ const makeRequest = function (){
         const data = JSON.parse(this.responseText);
         const { name, sprites } = data;
         const newName = name[0].toUpperCase();
-        const pokemonName = document.createElement('p');
+        const pokemonName = document.createElement('pokemonName');
     
         pokemonInfo.append(pokemonName);
         pokemonName.append(newName + name.slice(1));
+        pokemonName.classList.add('pokemon-name');
 
-        const commonColor = document.createElement('div');
         const shinyColor = document.createElement('div');
+        const commonColor = document.createElement('div');
 
         function createNewImage(image, pokemonColor) {
             if(image !== null){
                 const container = document.createElement('div');
-                const img = document.createElement('img')
+                const img = document.createElement('img');
                 container.classList.add('img-container');
                 img.src = image;
                 img.classList.add('img-styles');
