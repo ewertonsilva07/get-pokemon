@@ -46,6 +46,11 @@ const makeRequest = function (){
         shinyColor.append(shinyTitle);
         createNewImage(sprites.back_shiny, shinyColor);
         createNewImage(sprites.front_shiny, shinyColor);
+
+        const titles = document.querySelectorAll('h2');
+        for(let t of titles) {
+            t.classList.add('pokemon-color-title');
+        }
     }
     
     myReq.onerror = function() {
