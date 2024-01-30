@@ -20,8 +20,8 @@ const makeRequest = function (){
         pokemonName.append(newName + name.slice(1));
         pokemonName.classList.add('pokemon-name');
 
-        const shinyColor = document.createElement('div');
-        const commonColor = document.createElement('div');
+        const shinyColor = document.createElement('section');
+        const commonColor = document.createElement('section');
 
         function createNewImage(image, pokemonColor) {
             if(image !== null){
@@ -50,6 +50,11 @@ const makeRequest = function (){
         const titles = document.querySelectorAll('h2');
         for(let t of titles) {
             t.classList.add('pokemon-color-title');
+        }
+
+        const colorContainers = document.querySelectorAll('#pokemonInformation section');
+        for(let colorContainer of colorContainers) {
+            colorContainer.classList.add('color-container');
         }
     }
     

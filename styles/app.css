@@ -26,6 +26,10 @@ body{
     align-items: center;
 }
 
+#pokemonInformation {
+    margin: 0 20px;
+}
+
 #searchPokemon {
     width: 280px;
     padding: 25px 0;
@@ -59,19 +63,27 @@ body{
     font-family: 'Pokemon';
     font-size: 0.8rem;
     margin-bottom: 10px;
+    width: 100%;
+}
+
+.color-container {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .img-container {
-    width: 100%;
-    height: 200px;
+    width: 40%;
+    height: 150px;
     border: 4px double #5c5c5c;
     border-radius: 6px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     box-sizing: border-box;
 }
 
 .img-styles {
-    height: 200px;
+    height: 150px;
     width: auto;
     box-sizing: border-box;
 }
