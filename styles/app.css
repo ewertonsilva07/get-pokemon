@@ -16,7 +16,7 @@ body{
 #appContainer {
     background-color: #fff;
     min-height: 200px;
-    width: 95%;
+    width: 400px;
     margin: 30px auto 30px;
     border: 6px double #000000;
     border-radius: 5px;
