@@ -13,7 +13,7 @@ body{
     background-attachment: fixed;
 }
 
-header {
+nav {
     background-color: #fff;
     padding: 15px 10px 15px;
     border: 7px double #000;
@@ -26,6 +26,10 @@ header {
     font-size: 2rem;
     color: #000;
     margin-left: 30px;
+}
+
+#logo img {
+    transform: translate(-18px, 6px)
 }
 
 #appContainer {
