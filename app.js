@@ -15,9 +15,6 @@ const makeRequest = function (){
         const { name, sprites } = data;
         const newName = name[0].toUpperCase();
         const pokemonName = document.createElement('h1');
-        const pokemonDescription = document.createElement('section');
-
-        console.log(data)
 
         pokemonInfo.append(pokemonName);
         pokemonName.append(newName + name.slice(1));
