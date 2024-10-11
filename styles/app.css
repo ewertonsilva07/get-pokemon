@@ -2,7 +2,7 @@
     font-family: 'Pokemon';
     src:
         local('Pokemon'),
-        url('/fonts/PokemonGb-RAeo.ttf') format('truetype');
+        url('fonts/PokemonGb-RAeo.ttf') format('truetype');
 }
 
 body{
